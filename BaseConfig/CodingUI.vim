@@ -9,4 +9,3 @@ set wildignore+=*.*~     " Unix
 set laststatus=2
 set number
 set display=lastline           " Show as much as possible of the last line
-source ~/.vim/reimu-vim/Options/relative.vim
