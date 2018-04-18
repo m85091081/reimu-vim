@@ -55,13 +55,6 @@ while [[ "$endBool" == "false" ]]; do
             clear
             echo "==Reimu Customer VI Improve Installer=="
             echo "Step1 : Vim Code Base Enviroment Install."
-            read -p "Type : (y/n)" temp 
-            if [[ "$temp" == "y" ]]; then
-            elif [[ "$temp" == "n" ]]; then
-
-            else
-                echo "what the fuck are you writing"
-            fi
         elif [[ "$type" == 0 ]]; then
             exit
         fi
