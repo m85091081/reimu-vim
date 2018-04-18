@@ -1,9 +1,10 @@
 function GetPkg() {
-    curl -fLo ~/.vim/reimu-vim/$1 https://raw.githubusercontent.com/m85091081/reimu-vim/master/$1
+    curl -fLo ~/.vim/reimu-vim/$1 --create-dirs https://raw.githubusercontent.com/m85091081/reimu-vim/master/$1
 }
 
 function GetPlugin() {
     GetPkg PlugList/$1;
+    vim +PlugInstall +qall
     GetPkg PlugConfig/$1;
 }
 
@@ -33,8 +34,8 @@ while [[ "$endBool" == "false" ]]; do
     if [[ "$type" =~ ^[0-2]+$ ]]; then
         if [[ "$type" == 1 ]]; then
             PlugManager;
-            GetPkg BaseConfig/CondingEnv.vim ;
-            GetPkg BaseConfig/CondingUI.vim;
+            GetPkg BaseConfig/CodingEnv.vim;
+            GetPkg BaseConfig/CodingUI.vim;
             GetPkg BaseConfig/Options/relative.vim;
             echo "source ~/.vim/reimu-vim/BaseConfig/Options/relative.vim" >> ~/.vim/reimu-vim/BaseConfig/CodingUI.vim
             GetPkg BaseConfig/CodingIndent.vim;
@@ -49,7 +50,6 @@ while [[ "$endBool" == "false" ]]; do
             GetPlugin JinjaSupport.vim;
             GetPlugin NodeJSSupport.vim;
             GetPlugin YCM.vim;
-            vim +PlugInstall +qall
         elif [[ "$type" == 2 ]]; then
             clear
             echo "==Reimu Customer VI Improve Installer=="
