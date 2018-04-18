@@ -40,6 +40,8 @@ while [[ "$endBool" == "false" ]]; do
             echo "source ~/.vim/reimu-vim/BaseConfig/Options/relative.vim" >> ~/.vim/reimu-vim/BaseConfig/CodingUI.vim
             GetPkg BaseConfig/CodingIndent.vim;
             GetPkg BaseConfig/AutoRestore.vim;
+            GetPlugin CtrlP.vim;
+            GetPlugin Auto-Hl.vim
             GetPlugin Airline.vim;
             GetPlugin Ale.vim;
             GetPlugin Color.vim;
