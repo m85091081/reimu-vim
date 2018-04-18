@@ -1,6 +1,5 @@
 function GetPkg() {
-    curl -fLo ~/.vim/reimu-vim/$1 \ 
-        https://raw.githubusercontent.com/m85091081/reimu-vim/master/$1
+    curl -fLo ~/.vim/reimu-vim/$1 https://raw.githubusercontent.com/m85091081/reimu-vim/master/$1
 }
 
 function GetPlugin() {
